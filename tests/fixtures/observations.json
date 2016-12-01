@@ -1,0 +1,53 @@
+[{
+  "id": "dc39b57f-77ce-43ce-b1c3-3e2b64326976",
+  "recorded_at": "2016-01-01T00:00:00Z",
+  "metar": "ZZYY 62560 02106 2100/ 720160 039395 6113/ 11119 40164 52009 22219 00270 444 20130 02106 2056/ 50101 80096 80048 9/015",
+  "measurements": [{
+    "parameter": "precipitation_1h",
+    "value": 3.0,
+    "unit": "millimeters"
+  },{
+    "parameter": "temperature",
+    "value": 30.0,
+    "unit": "millimeters"
+  }]
+},{
+  "id": "e6d4f007-c3f6-4b37-9072-c18d9194bc1c",
+  "recorded_at": "2016-01-01T01:00:00Z",
+  "metar": "ZZYY 62560 02106 2100/ 720160 039395 6113/ 11119 40164 52009 22219 00270 444 20130 02106 2056/ 50101 80096 80048 9/015",
+  "measurements": [{
+    "parameter": "precipitation_1h",
+    "value": 4.5,
+    "unit": "millimeters"
+  },{
+    "parameter": "temperature",
+    "value": 31.0,
+    "unit": "millimeters"
+  }]
+},{
+  "id": "698018b2-b631-4c60-acb6-ae760e0ca2c1",
+  "recorded_at": "2016-01-01T02:00:00Z",
+  "metar": "ZZYY 62560 02106 2100/ 720160 039395 6113/ 11119 40164 52009 22219 00270 444 20130 02106 2056/ 50101 80096 80048 9/015",
+  "measurements": [{
+    "parameter": "precipitation_1h",
+    "value": 5.0,
+    "unit": "millimeters"
+  },{
+    "parameter": "temperature",
+    "value": 32.0,
+    "unit": "millimeters"
+  },{
+    "parameter": "relative_humidity",
+    "value": 99,
+    "unit": "percent"
+  }]
+},{
+  "id": "dd02587e-0f29-4bad-9efa-60c8117b74fa",
+  "recorded_at": "2016-01-01T03:00:00Z",
+  "metar": "ZZYY 62560 02106 2100/ 720160 039395 6113/ 11119 40164 52009 22219 00270 444 20130 02106 2056/ 50101 80096 80048 9/015",
+  "measurements": [{
+    "parameter": "wind_direction",
+    "value": 180,
+    "unit": "degrees"
+  }]
+}]
