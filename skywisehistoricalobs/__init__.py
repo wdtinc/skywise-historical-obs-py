@@ -13,7 +13,7 @@ class HistoricalObsResource(SkyWiseJSON, SkyWiseResource):
         HistoricalObsResource.set_password(app_key)
     pass
 
-_site = os.getenv('SKYWISE_HISTORICAL_OBS_SITE', '')
+_site = os.getenv('SKYWISE_HISTORICAL_OBS_SITE', 'https://historical-obs.api.wdtinc.com')
 _user = os.getenv('SKYWISE_HISTORICAL_OBS_APP_ID', '')
 _password = os.getenv('SKYWISE_HISTORICAL_OBS_APP_KEY', '')
 

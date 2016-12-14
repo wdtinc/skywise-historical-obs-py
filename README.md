@@ -67,10 +67,10 @@ LOUIS ARMSTRONG NEW ORLEANS INTL AP US LA KMSY --- 16.6191771139 --- {u'starts_a
 We can now get the observations from the nearby Lakefront Airport during the historic landfall of hurricane Katrina in 2005.
 
 ```python
-gulfport = stations[-2]
+lakefront = stations[-2]
 start = arrow.get(2005, 8, 29, 6, 00)
 end = arrow.get(2005, 8, 31, 00, 00)
-katrina_obs = gulfport.observations(start=start, end=end)
+katrina_obs = lakefront.observations(start=start, end=end)
 
 for ob in katrina_obs:
     for measurement in ob.measurements:
