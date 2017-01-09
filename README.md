@@ -30,7 +30,7 @@ Otherwise, you'll need to set your App ID/Key explicitly in your app/script befo
 from skywisehistoricalobs import HistoricalObsResource
 
 HistoricalObsResource.set_app_id('{YOUR_APP_ID}')
-HistoricalObsResource.set_set_app_key('{YOUR_APP_KEY}')
+HistoricalObsResource.set_app_key('{YOUR_APP_KEY}')
 ```
 
 ## Try It Out
@@ -75,7 +75,7 @@ katrina_obs = lakefront.observations(start=start, end=end)
 for ob in katrina_obs:
     for measurement in ob.measurements:
         if measurement['parameter'] == 'wind_speed':
-            print ob.recorded_at, ': ',  measurement['value'], measurement['units']
+            print ob.recorded_at, ': ',  measurement['value'], measurement['unit']
 ```
 
 You should see output like :

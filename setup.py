@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='skywise-historical-obs',
-    version='0.1.0',
+    version='0.1.1',
     package_data={'': ['README.md']},
     packages=['skywisehistoricalobs'],
     install_requires=[
