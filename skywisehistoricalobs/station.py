@@ -44,6 +44,9 @@ class Station(HistoricalObsResource):
     def __init__(self, **kwargs):
         super(Station, self).__init__(**kwargs)
 
+    def __repr__(self):
+        return str(self.json())
+
     @classmethod
     def nearest(cls, latitude, longitude, **kwargs):
         return Station.find(latitude=latitude, longitude=longitude, **kwargs)
