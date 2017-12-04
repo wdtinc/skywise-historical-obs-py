@@ -46,3 +46,6 @@ class StationObservation(HistoricalObsResource):
         "end": datetime_to_str,
         "parameters": _parameter_list_to_str
     })
+
+    def __repr__(self):
+        return str(self.json())
