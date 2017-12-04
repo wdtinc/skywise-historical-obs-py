@@ -8,29 +8,29 @@ def _parameter_list_to_str(l):
 
 
 _deserialize_obs = Schema({
-    "id": unicode,
-    "recorded_at": datetime,
+    "id": Any(unicode, None),
+    "recorded_at": Any(datetime, None),
     "measurements": [Schema({
-        "parameter": unicode,
-        "value": Any(float, int),
-        "unit": unicode
+        "parameter": Any(unicode, None),
+        "value": Any(float, int, None),
+        "unit": Any(unicode, None)
     })],
-    Optional("metar"): unicode,
-    Optional("weather"): unicode
-})
+    Optional("metar"): Any(unicode, None),
+    Optional("weather"): Any(unicode, None)
+}, required=False)
 
 
 _serialize_obs = Schema({
-    "id": unicode,
-    "recorded_at": datetime_to_str,
+    "id": Any(unicode, None),
+    "recorded_at": Any(datetime_to_str, None),
     "measurements": [Schema({
-        "parameter": unicode,
-        "value": Any(float, int),
-        "unit": unicode
+        "parameter": Any(unicode, None),
+        "value": Any(float, int, None),
+        "unit": Any(unicode, None)
     })],
-    Optional("metar"): unicode,
-    Optional("weather"): unicode
-})
+    Optional("metar"): Any(unicode, None),
+    Optional("weather"): Any(unicode, None)
+}, required=False)
 
 
 class StationObservation(HistoricalObsResource):
@@ -42,9 +42,9 @@ class StationObservation(HistoricalObsResource):
     _serialize = _serialize_obs
 
     _args = Schema({
-        "start": datetime_to_str,
-        "end": datetime_to_str,
-        "parameters": _parameter_list_to_str
+        "start": Any(datetime_to_str, None),
+        "end": Any(datetime_to_str, None),
+        "parameters": Any(_parameter_list_to_str, None)
     })
 
     def __repr__(self):
