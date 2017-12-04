@@ -11,35 +11,35 @@ class Station(HistoricalObsResource):
     _path = '/stations/{latitude}/{longitude}'
 
     _deserialize = Schema({
-        'id': unicode,
-        'description': unicode,
+        'id': Any(unicode, None),
+        'description': Any(unicode, None),
         'location': {
-            'latitude': latitude_type,
-            'longitude': longitude_type,
-            'elevation': float
+            'latitude': Any(latitude_type, None),
+            'longitude': Any(longitude_type, None),
+            'elevation': Any(float, None)
         },
-        'earliest_recorded_at': datetime,
-        'latest_recorded_at': datetime,
-        'distance': float
-    })
+        'earliest_recorded_at': Any(datetime, None),
+        'latest_recorded_at': Any(datetime, None),
+        'distance': Any(float, None)
+    }, required=False)
 
     _serialize = Schema({
-        'id': unicode,
-        'description': unicode,
+        'id': Any(unicode, None),
+        'description': Any(unicode, None),
         'location': {
-            'latitude': latitude_type,
-            'longitude': longitude_type,
-            'elevation': float
+            'latitude': Any(latitude_type, None),
+            'longitude': Any(longitude_type, None),
+            'elevation': Any(float, None)
         },
-        'earliest_recorded_at': datetime_to_str,
-        'latest_recorded_at': datetime_to_str,
-        'distance': float
-    })
+        'earliest_recorded_at': Any(datetime_to_str, None),
+        'latest_recorded_at': Any(datetime_to_str, None),
+        'distance': Any(float, None)
+    }, required=False)
 
     _args = Schema({
-        'limit': int,
-        'radius': Any(float, int)
-    })
+        'limit': Any(int, None),
+        'radius': Any(float, int, None)
+    }, required=False)
 
     def __init__(self, **kwargs):
         super(Station, self).__init__(**kwargs)
@@ -50,4 +50,3 @@ class Station(HistoricalObsResource):
 
     def observations(self, **kwargs):
         return StationObservation.find(station_id=self.id, **kwargs)
-
